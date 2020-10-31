@@ -64,6 +64,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.cpurend.vsync=false \
     ro.config.avoid_gfx_accel=true \
     DEVICE_PROVISIONED=1 \
+    ro.com.android.mobiledata=false \
     persist.hwc.mdpcomp.enable=true \
     persist.hwc.ptor.enable=true \
     dev.pm.dyn_samplingrate=1 \
