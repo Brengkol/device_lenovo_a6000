@@ -16,17 +16,22 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/lenovo/a6000/device.mk)
-$(call inherit-product, vendor/lineage/config/common_mini_phone.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
+
+# Inherit some common AEX stuff.
+$(call inherit-product, vendor/aosp/common.mk)
+
+# Include Bootanimation configuration
+TARGET_BOOT_ANIMATION_RES := 720
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := Kraft-T,a6000,K30-T,A6000,Kraft-W,Kraft-C,k30t,msm8916,Kraft-A6000,wt86518
 
 TARGET_VENDOR := Lenovo
 PRODUCT_DEVICE := a6000
-PRODUCT_NAME := lineage_a6000
+PRODUCT_NAME := aosp_a6000
 BOARD_VENDOR := Lenovo
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := A6000
