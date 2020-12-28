@@ -16,11 +16,18 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/lenovo/a6000/device.mk)
-$(call inherit-product, vendor/aosp/config/common.mk)
 
-# Aosp Only.
+# Inherit some common DerpFest Rom stuff.
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+
+# Bootanimation
 TARGET_BOOT_ANIMATION_RES := 720
+
+# Gapps common
 TARGET_GAPPS_ARCH := arm
+
+# Adding Derp stuffs
+IS_PHONE := true
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
@@ -30,7 +37,7 @@ TARGET_OTA_ASSERT_DEVICE := Kraft-T,a6000,K30-T,A6000,Kraft-W,Kraft-C,k30t,msm89
 
 TARGET_VENDOR := Lenovo
 PRODUCT_DEVICE := a6000
-PRODUCT_NAME := aosp_a6000
+PRODUCT_NAME := derp_a6000
 BOARD_VENDOR := Lenovo
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := A6000
