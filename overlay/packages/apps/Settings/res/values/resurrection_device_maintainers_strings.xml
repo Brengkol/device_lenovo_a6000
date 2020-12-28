@@ -15,11 +15,7 @@
    MA 02110-1301, USA.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="device_a6010" translatable="false">Lenovo A6010</string>
-  <string name="device_a6010_codename" translatable="false">a6010</string>
-  <string name="device_a6010_maintainer" translatable="false">acroreiser</string>
-
   <string name="device_a6000" translatable="false">Lenovo A6000</string>
   <string name="device_a6000_codename" translatable="false">a6000</string>
-  <string name="device_a6000_maintainer" translatable="false">acroreiser</string>
+  <string name="device_a6000_maintainer" translatable="false">ekorudianto27</string>
 </resources>

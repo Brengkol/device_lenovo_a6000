@@ -381,13 +381,6 @@
             app:type="phone" />
 
         <com.android.settings.rr.Preferences.DevicePreference
-            android:id="@+id/device_a6010"
-            android:title="@string/device_a6010"
-            app:codename="@string/device_a6010_codename"
-            app:maintainer="@string/device_a6010_maintainer"
-            app:type="phone" />
-
-        <com.android.settings.rr.Preferences.DevicePreference
             android:id="@+id/device_aio_row"
             android:title="@string/device_aio_row"
             app:codename="@string/device_aio_row_codename"
