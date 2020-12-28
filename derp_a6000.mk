@@ -18,7 +18,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/lenovo/a6000/device.mk)
 
 # Inherit some common DerpFest Rom stuff.
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+$(call inherit-producnt, vendor/aosip/config/common_full_phone.mk)
 
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 720
