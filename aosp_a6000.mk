@@ -16,11 +16,12 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/lenovo/a6000/device.mk)
-$(call inherit-product, vendor/aosp/config/common.mk)
 
-# Aosp Only.
+# Inherit some common Pixel Rom stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_GAPPS_ARCH := arm
+IS_PHONE := true
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
