@@ -17,6 +17,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/lenovo/a6000/device.mk)
 $(call inherit-product, vendor/arrow/config/common.mk)
+$(call inherit-product-if-exists, device/bloatware/config.mk)
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 720
@@ -29,7 +30,7 @@ TARGET_OTA_ASSERT_DEVICE := Kraft-T,a6000,K30-T,A6000,Kraft-W,Kraft-C,k30t,msm89
 
 TARGET_VENDOR := Lenovo
 PRODUCT_DEVICE := a6000
-PRODUCT_NAME := ancient_a6000
+PRODUCT_NAME := arrow_a6000
 BOARD_VENDOR := Lenovo
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := A6000
