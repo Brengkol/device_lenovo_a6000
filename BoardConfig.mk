@@ -174,19 +174,10 @@ BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 TARGET_HW_DISK_ENCRYPTION := true
 TARGET_LEGACY_HW_DISK_ENCRYPTION := true
 
-<<<<<<< HEAD
 # FM (Wired Radio)
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 BOARD_HAVE_QCOM_FM := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
-=======
-# Gesture
-TARGET_TAP_TO_WAKE_NODE := /sys/android_touch/doubletap2wake
-
-# Recovery
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
-BOARD_NO_SECURE_DISCARD := true
->>>>>>> c926fb17... wt88047: enable dt2w
 
 # Media extentions
 TARGET_USES_MEDIA_EXTENSIONS := true

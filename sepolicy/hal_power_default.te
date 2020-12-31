@@ -1,6 +1,1 @@
-<<<<<<< HEAD
 allow hal_power_default sysfs:file { open write };
-=======
-allow hal_power_default gesture_sysfs:dir search;
-allow hal_power_default gesture_sysfs:file rw_file_perms;
->>>>>>> c926fb17... wt88047: enable dt2w

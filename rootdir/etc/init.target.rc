@@ -69,18 +69,8 @@ on init
     write /dev/cpuset/audio-app/cpus 0-3
     write /dev/cpuset/audio-app/mems 0
 
-<<<<<<< HEAD
     chown system system /sys/class/power_supply/battery/charging_enabled
     chmod 0664 /sys/class/power_supply/battery/charging_enabled
-=======
-    # Gesture
-    chown system system /sys/android_touch/doubletap2wake
-    chmod 0660 /sys/android_touch/doubletap2wake
-
-on fs
-    # GnssConfiguration doesn't actually look at gps.conf, just the debug file
-    mount none /system/etc/gps.conf /system/etc/gps_debug.conf bind
->>>>>>> c926fb17... wt88047: enable dt2w
 
 service vm_bms /system/vendor/bin/vm_bms
     class main
