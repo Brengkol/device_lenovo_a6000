@@ -17,10 +17,12 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/lenovo/a6000/device.mk)
 $(call inherit-product, vendor/ancient/config/common_full_phone.mk)
-$(call inherit-product-if-exists, device/bloatware/config.mk)
 
-# Ancient
+# Ancient Gapps
+IS_PHONE := true
 ANCIENT_NOGAPPS := true
+
+# Ancient Bootanimation
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Must define platform variant before including any common things
