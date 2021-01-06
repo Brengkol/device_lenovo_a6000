@@ -1,6 +1,6 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_a6000.mk
+    $(LOCAL_DIR)/arrow_a6000.mk
 
 # Lunch choices
 COMMON_LUNCH_CHOICES := \
-    lineage_a6000-userdebug
+    arrow_a6000-userdebug

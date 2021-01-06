@@ -17,7 +17,7 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/lenovo/a6000/device.mk)
-$(call inherit-product, vendor/lineage/config/common_mini_phone.mk)
+$(call inherit-product, vendor/arrow/config/common.mk)
 $(call inherit-product-if-exists, device/bloatware/config.mk)
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
@@ -27,7 +27,7 @@ TARGET_OTA_ASSERT_DEVICE := Kraft-T,a6000,K30-T,A6000,Kraft-W,Kraft-C,k30t,msm89
 
 TARGET_VENDOR := Lenovo
 PRODUCT_DEVICE := a6000
-PRODUCT_NAME := lineage_a6000
+PRODUCT_NAME := arrow_a6000
 BOARD_VENDOR := Lenovo
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := A6000
@@ -53,7 +53,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-lenovo
 
 # Trust
 PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
+    vendor.arrow.trust@1.0-service
 
 # APN(s)
 PRODUCT_COPY_FILES += device/lenovo/a6000/apns-conf.xml:system/etc/apns-conf.xml
