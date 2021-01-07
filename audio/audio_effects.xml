@@ -9,6 +9,7 @@
         <library name="visualizer_sw" path="libvisualizer.so"/>
         <library name="visualizer_hw" path="libqcomvisualizer.so"/>
         <library name="downmix" path="libdownmix.so"/>
+        <library name="dynamics_processing" path="libdynproc.so"/>
         <library name="loudness_enhancer" path="libldnhncr.so"/>
         <library name="proxy" path="libeffectproxy.so"/>
         <library name="offload_bundle" path="libqcompostprocbundle.so"/>

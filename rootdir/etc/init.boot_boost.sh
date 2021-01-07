@@ -10,5 +10,9 @@ echo 400000000 > /sys/class/devfreq/1c00000.qcom,kgsl-3d0/min_freq
 sleep 40
 
 echo "interactive" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+<<<<<<< HEAD
+=======
+echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 echo "msm-adreno-tz" > /sys/class/devfreq/1c00000.qcom,kgsl-3d0/governor
 echo 200000000 > /sys/class/devfreq/1c00000.qcom,kgsl-3d0/min_freq

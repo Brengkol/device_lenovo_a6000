@@ -38,8 +38,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8916 \
     libgenlock \
     libtinyxml \
-    memtrack.msm8916 \
-    copybit.msm8916
+    memtrack.msm8916
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
@@ -48,11 +47,20 @@ PRODUCT_PACKAGES += \
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
+<<<<<<< HEAD
+=======
+    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
+    ro.surface_flinger.has_HDR_display=false \
+    ro.surface_flinger.has_wide_color_display=false \
+    ro.surface_flinger.start_graphics_allocator_service=true \
+    ro.surface_flinger.use_context_priority=true \
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
     debug.mdpcomp.idletime=600 \
     persist.hwc.mdpcomp.enable=true \
     persist.hwc.ptor.enable=true \
     debug.enable.sglscale=1 \
     debug.sf.hw=0 \
+<<<<<<< HEAD
     debug.hwui.renderer=opengl \
     debug.egl.hw=0 \
     debug.sf.disable_hwc=0 \
@@ -65,6 +73,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
     persist.hwc.mdpcomp.enable=true \
     persist.hwc.ptor.enable=true \
+=======
+    debug.egl.hw=0 \
+    debug.sf.disable_backpressure=1 \
+    debug.sf.enable_gl_backpressure=1 \
+    debug.sf.recomputecrop=0 \
+    debug.sf.latch_unsignaled=1 \
+    debug.cpurend.vsync=false \
+    persist.debug.wfdenable=1 \
+    persist.sys.wfd.virtual=1 \
+    debug.hwui.renderer=opengl \
+    ro.config.avoid_gfx_accel=true \
+    ro.qualcomm.cabl=2 \
+    DEVICE_PROVISIONED=1 \
+    ro.com.android.mobiledata=false \
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
     dev.pm.dyn_samplingrate=1 \
     persist.timed.enable=true \
     ro.hardware.egl=adreno
@@ -81,8 +104,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
+<<<<<<< HEAD
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.3-service.clearkey
+=======
+    android.hardware.drm@1.0-service-lazy \
+    android.hardware.drm@1.3-service-lazy.clearkey
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 
 # Protobuf
 PRODUCT_COPY_FILES += \
@@ -117,7 +145,11 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     android.hardware.audio@6.0-impl \
     android.hardware.soundtrigger@2.2-impl \
+<<<<<<< HEAD
     android.hardware.audio@2.0-service \
+=======
+    android.hardware.audio.service \
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
     android.hardware.audio.effect@6.0-impl
 
 PRODUCT_COPY_FILES += \
@@ -133,7 +165,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/acdb/QRD_Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/QRD_Headset_cal.acdb \
     $(LOCAL_PATH)/audio/acdb/QRD_Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/QRD/QRD_Speaker_cal.acdb \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
-    $(LOCAL_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_skui.xml \
+    $(LOCAL_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_skuh.xml \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
@@ -147,10 +179,25 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml
 
+<<<<<<< HEAD
+=======
+# Ethernet
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.ethernet.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.ethernet.xml
+
+# APEX
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/ld.config.txt:system/etc/swcodec/ld.config.txt
+
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 # Public Libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.audio.sdk.fluencetype=none \
@@ -198,6 +245,10 @@ PRODUCT_PACKAGES += \
     camera.device@1.0-impl \
     camera.msm8916 \
     libmm-qcamera \
+<<<<<<< HEAD
+=======
+    libshim_atomic \
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
     libboringssl-compat \
     Snap
 
@@ -292,14 +343,17 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-service \
     android.hardware.authsecret@1.0-service \
     android.hardware.gatekeeper@1.0-service.software
+<<<<<<< HEAD
 
 # Doze
 PRODUCT_PACKAGES += \
     LenovoDoze
+=======
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 
-# Keystore
+# Doze
 PRODUCT_PACKAGES += \
-    keystore.msm8916
+    LenovoDoze
 
 # FM
 PRODUCT_PACKAGES += \
@@ -366,9 +420,12 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
+<<<<<<< HEAD
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.max_starting_bg=8
+=======
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -385,7 +442,7 @@ PRODUCT_COPY_FILES += \
 
 # First api level, device has been commercially launched
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.product.first_api_level=19
+    ro.product.first_api_level=21
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -412,8 +469,13 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
+<<<<<<< HEAD
     android.hardware.health@2.0-impl \
     android.hardware.health@2.0-service
+=======
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 
 # Touchscreen
 PRODUCT_COPY_FILES += \
@@ -439,11 +501,19 @@ PRODUCT_PACKAGES += \
     set_baseband.sh
 
 # zRam
+<<<<<<< HEAD
 PRODUCT_PACKAGES += \
     set_zram.sh
 
 # Reduce post boot lags
 PRODUCT_PACKAGES += \
+=======
+PRODUCT_PACKAGES += \
+    set_zram.sh
+
+# Reduce post boot lags
+PRODUCT_PACKAGES += \
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
     init.boot_boost.sh
 
 # Set device-dependement props
@@ -452,7 +522,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.a6000
+    android.hardware.light@2.0-service.msm8916
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -506,7 +576,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
-    $(LOCAL_PATH)/configs/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
+    $(LOCAL_PATH)/configs/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_cfg.ini
 
 # Wifi
 PRODUCT_COPY_FILES += \
@@ -514,24 +584,30 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
     $(LOCAL_PATH)/wifi/WCNSS_wlan_dictionary.dat:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_wlan_dictionary.dat
 
+# TimeKeep
+PRODUCT_PACKAGES += \
+    timekeep \
+    TimeKeep
+
 # USB HAL
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.cyanogen_8916
 
-# Hack
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_cfg.ini
-
 # Optimize
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := $(LOCAL_PATH)/profiles/boot.prof.txt
 PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
 
+<<<<<<< HEAD
 # Boot Animtion
 TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_BOOT_ANIMATION_RES := 720
+=======
+# Animation
+TARGET_BOOT_ANIMATION_RES := 720
+TARGET_BOOTANIMATION_HALF_RES := true
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 TARGET_BOOTANIMATION_MULTITHREAD_DECODE := true
 TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
@@ -549,7 +625,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.foreground-heap-growth-multiplier=4.0 \
     dalvik.vm.dex2oat-flags=--no-watch-dog \
     dalvik.vm.dex2oat-swap=false \
+<<<<<<< HEAD
     dalvik.vm.dex2oat-threads=4 \
+=======
+    dalvik.vm.dex2oat-threads=2 \
+    dalvik.vm.dex2oat-cpu-set=0,1 \
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
     dalvik.vm.madvise-random=true \
     ro.vendor.qti.am.reschedule_service=true \
     dalvik.vm.isa.arm.features=div \
@@ -572,7 +653,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.lmk.downgrade_pressure=60 \
     ro.lmk.kill_heaviest_task=false \
     ro.lmk.medium=800 \
+<<<<<<< HEAD
     ro.lmk.critical=0
+=======
+    ro.lmk.critical=0 \
+    ro.lmk.use_psi=false \
+    ro.lmk.kill_heaviest_task=true
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 
 
 # Memory optimizations
@@ -602,14 +689,15 @@ PRODUCT_PACKAGES += \
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
+    keyguard.no_require_sim=true \
     persist.data.qmi.adb_logmask=0 \
-    persist.data.target=dpm1 \
     persist.radio.apm_sim_not_pwdn=1 \
     ro.telephony.call_ring.multiple=false \
     ro.use_data_netmgrd=true \
     persist.radio.multisim.config=dsds \
     persist.radio.custom_ecc=1 \
-    persist.radio.ecc_hard_1=112,911,110,122,119,120,000,118 \
+    ril.ecclist=000,08,100,101,102,110,112,118,119,120,122,911,999 \
+    ril.ecclist1=000,08,100,101,102,110,112,118,119,120,122,911,999 \
     persist.radio.ecc_hard_count=1 \
     rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so \
     ril.subscription.types=NV,RUIM \
@@ -630,8 +718,30 @@ PRODUCT_PACKAGES += \
 # Seccomp
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
+<<<<<<< HEAD
 # Sensors
 PRODUCT_PACKAGES += \
+=======
+
+# Thermal HAL
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.msm8916
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.thermal.config=thermal_info_config.json
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
+
+# Sensors
+PRODUCT_PACKAGES += \
+    calmodule.cfg \
+    libcalmodule_common \
+    libcalmodule_akm \
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
     android.hardware.sensors@1.0-impl.msm8916 \
     android.hardware.sensors@1.0-service.msm8916 \
     accelcal \
@@ -646,9 +756,19 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.light.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.light.xml \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.proximity.xml \
-    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
     $(LOCAL_PATH)/configs/sensors/_hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/_hals.conf
 
+<<<<<<< HEAD
+=======
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service-sysfs
+
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.a6010
+
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 # AOSP filesystems
 PRODUCT_PACKAGES += \
     fsck.exfat \
@@ -658,15 +778,25 @@ PRODUCT_PACKAGES += \
     mkfs.ntfs \
     mount.ntfs
 
+<<<<<<< HEAD
 # Touch
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.a6010
 
+=======
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 # Disable traced and iorapd
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.iorapd.enable=false \
 	persist.traced.enable=0
 
+<<<<<<< HEAD
+=======
+# Updater properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.recovery_update=false
+
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 # USB ID
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.usb.id.midi=90BA \
@@ -679,4 +809,17 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.usb.id.ums_adb=2285 \
     ro.usb.vid=2970
 
-$(call inherit-product, vendor/lenovo/a6000/a6000-vendor.mk)
+# Do not spin up a separate process for the network stack, use an in-process APK.
+PRODUCT_PACKAGES += InProcessNetworkStack
+PRODUCT_PACKAGES += com.android.tethering.inprocess
+
+# Makes device compatible with Google Dialer Go.
+# In better case it should be a part of Gapps
+# but we have no Gapps specially for Android Go devices
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/googledialergo-sysconfig.xml:system/etc/sysconfig/googledialergo-sysconfig.xml
+
+# Inherit common Android Go defaults.
+$(call inherit-product, build/make/target/product/go_defaults.mk)
+
+$(call inherit-product, vendor/lenovo/a6010/a6010-vendor.mk)

@@ -49,7 +49,11 @@ ifneq ($(call is-platform-sdk-version-at-least,18),true)
 LOCAL_CFLAGS += -DUSE_JB_MR1
 endif
 
+<<<<<<< HEAD
 #LOCAL_CFLAGS += -DDEFAULT_DENOISE_MODE_ON
+=======
+# LOCAL_CFLAGS += -DDEFAULT_DENOISE_MODE_ON
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 
 LOCAL_C_INCLUDES := \
         $(LOCAL_PATH)/../stack/common \

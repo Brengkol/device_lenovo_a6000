@@ -37,6 +37,18 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
+<<<<<<< HEAD
+=======
+LOCAL_SRC_FILES := lenovo_atomic.cpp
+LOCAL_SHARED_LIBRARIES := libcutils
+LOCAL_MODULE := libshim_atomic
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 LOCAL_SRC_FILES := libaudioclient_shim.cpp
 LOCAL_MODULE := libaudioclient_shim
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES

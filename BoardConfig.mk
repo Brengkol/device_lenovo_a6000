@@ -13,7 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+<<<<<<< HEAD
 DEVICE_PATH := device/lenovo/a6000
+=======
+DEVICE_PATH := device/lenovo/a6010
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 
 # APEX
 TARGET_FLATTEN_APEX := true
@@ -60,12 +64,24 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 an
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
+<<<<<<< HEAD
 TARGET_KERNEL_SOURCE := kernel/lenovo/a6000
 TOP_PATH := $(realpath $(TOP))
 KERNEL_TOOLCHAIN := $(TOP_PATH)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi/bin
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
 TARGET_KERNEL_CONFIG := lineageos_a6000_defconfig
 TARGET_HAS_MEMFD_BACKPORT := true
+=======
+TARGET_KERNEL_SOURCE := kernel/lenovo/a6010
+TOP_PATH := $(realpath $(TOP))
+KERNEL_TOOLCHAIN := $(TOP_PATH)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi/bin
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-len-linux-gnueabi-
+TARGET_KERNEL_CONFIG := lineageos_a6010_defconfig
+TARGET_HAS_MEMFD_BACKPORT := true
+
+# Ramdisk compression
+BOARD_RAMDISK_USE_XZ := true
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 
 # File System
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
@@ -79,7 +95,12 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1887436800
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 13295385600
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_SUPPRESS_EMMC_WIPE := true
+<<<<<<< HEAD
 TARGET_EXFAT_DRIVER := sdfat
+=======
+TARGET_KERNEL_HAVE_EXFAT := true
+TARGET_EXFAT_DRIVER := exfat
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_USES_MKE2FS := true
 BOARD_ROOT_EXTRA_FOLDERS := firmware persist
@@ -98,7 +119,7 @@ endif
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 
 # Security Patch Level
-VENDOR_SECURITY_PATCH := 2016-01-01
+VENDOR_SECURITY_PATCH := 2016-03-01
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
@@ -107,26 +128,39 @@ MALLOC_SVELTE := true
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+<<<<<<< HEAD
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
+=======
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 PRODUCT_VENDOR_MOVE_ENABLED := true
 
 # Display
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
 TARGET_CONTINUOUS_SPLASH_ENABLED := true
+<<<<<<< HEAD
 SF_START_GRAPHICS_ALLOCATOR_SERVICE := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+=======
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 TARGET_USE_COMPAT_GRALLOC_PERFORM := true
 TARGET_USES_ION := true
 BOARD_USES_ADRENO := true
 TARGET_USES_NEW_ION_API := true
 USE_OPENGL_RENDERER := true
+<<<<<<< HEAD
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U | 0x02000000U | 0x02002000U
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 TARGET_HAS_HDR_DISPLAY := false
 TARGET_HAS_WIDE_COLOR_DISPLAY := false
+=======
+TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U | 0x02000000U | 0x02002000U
+OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+TARGET_DISABLE_POSTRENDER_CLEANUP := true
+TARGET_USES_LEGACY_WFD := true
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 
 # HWUI
 HWUI_COMPILE_FOR_PERF := true
@@ -170,9 +204,6 @@ BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 QCOM_BT_READ_ADDR_FROM_PROP := true
 
-# Lights
-TARGET_PROVIDES_LIBLIGHT := true
-
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
@@ -207,11 +238,18 @@ ALLOW_MISSING_DEPENDENCIES=true
 
 # SEpolicy
 BOARD_SEPOLICY_DIRS += \
+<<<<<<< HEAD
     $(DEVICE_PATH)/sepolicy_tmp
 
 # Qcom Sepolicy
 # include device/qcom/sepolicy/sepolicy.mk
 #include device/qcom/sepolicy-legacy/sepolicy.mk
+=======
+    $(DEVICE_PATH)/sepolicy-moto8916
+
+# Qcom Sepolicy
+include device/qcom/sepolicy-legacy/sepolicy.mk
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 
 # Wi-Fi
 BOARD_HAS_QCOM_WLAN := true
@@ -226,7 +264,16 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 TARGET_HAS_BROKEN_WLAN_SET_INTERFACE := true
+<<<<<<< HEAD
+=======
+TARGET_DISABLE_WCNSS_CONFIG_COPY := true
+
+DISABLE_APEX_TEST_MODULE := true
+
+# Dedupe VNDK libraries with identical core variants.
+TARGET_VNDK_USE_CORE_VARIANT := true
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 
 DISABLE_APEX_TEST_MODULE := true
 # Proprietary Prebuilt
--include vendor/lenovo/a6000/BoardConfigVendor.mk
+-include vendor/lenovo/a6010/BoardConfigVendor.mk

@@ -185,14 +185,20 @@
          backlight values for LUX levels between these control points.
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
+        <item>5</item>
         <item>15</item>
-        <item>30</item>
+        <item>50</item>
         <item>100</item>
         <item>200</item>
         <item>400</item>
+        <item>700</item>
         <item>1000</item>
         <item>2000</item>
         <item>3000</item>
+        <item>5000</item>
+        <item>6500</item>
+        <item>7000</item>
+        <item>8700</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -201,15 +207,21 @@
          The brightness values must be between 0 and 255 and be non-decreasing.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>15</item>   <!-- 0-10 -->
-        <item>46</item>   <!-- 10-30 -->
-        <item>126</item>   <!-- 30-100 -->
-        <item>148</item>   <!-- 100-200 -->
-        <item>148</item>   <!-- 200-400 -->
-        <item>168</item>   <!-- 400-1000 -->
-        <item>200</item>  <!-- 1000-2000 -->
-        <item>226</item>  <!-- 2000-3000 -->
-        <item>255</item>  <!-- 3000+ -->
+        <item>10</item>
+        <item>18</item>
+        <item>27</item>
+        <item>38</item>
+        <item>48</item>
+        <item>55</item>
+        <item>64</item>
+        <item>74</item>
+        <item>120</item>
+        <item>164</item>
+        <item>170</item>
+        <item>180</item>
+        <item>225</item>
+        <item>255</item>
+        <item>255</item>
     </integer-array>
 
     <!-- Control the behavior when the user long presses the home button.
@@ -259,6 +271,7 @@
           turned off and the screen off animation has been performed. -->
     <bool name="config_dozeAfterScreenOffByDefault">true</bool>
 
+<<<<<<< HEAD
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
         <item>"/system/framework/arm/boot-framework.oat"</item>
@@ -271,6 +284,8 @@
         <item>"/data/dalvik-cache/arm/system@system_ext@priv-app@SystemUI@SystemUI.apk@classes.vdex"</item>
     </string-array>
 
+=======
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
     <!-- Should the pinner service pin the Home application? -->
     <bool name="config_pinnerHomeApp">true</bool>
 
@@ -300,6 +315,12 @@
          available on some devices. -->
     <bool name="config_enableHapticTextHandle">true</bool>
 
+<<<<<<< HEAD
+=======
+    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveNotificationLed">true</bool>
+
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
     <!-- The package name for the default wellbeing app.
          This package must be trusted, as it has the permissions to control other applications
          on the device.
@@ -321,6 +342,7 @@
     <string-array name="config_ephemeralResolverPackage">
         <item>com.google.android.gms</item>
     </string-array>
+<<<<<<< HEAD
     
     <!-- Whether WiFi display is supported by this device.
          There are many prerequisites for this feature to work correctly.
@@ -335,6 +357,8 @@
          * The device must be provisioned with HDCP keys (for protected content).
     -->
     <bool name="config_enableWifiDisplay">true</bool>
+=======
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 
     <!-- Control whether Night display is available. This should only be enabled on devices
          that have a HWC implementation that can apply the matrix passed to setColorTransform
@@ -412,6 +436,11 @@
 
     <!-- Smart charging -->
     <bool name="config_smartChargingAvailable">true</bool>
+<<<<<<< HEAD
+=======
+    <integer name="config_smartChargingBatteryLevel">90</integer>
+    <integer name="config_smartChargingBatteryResumeLevel">75</integer>
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
     <string name="config_smartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/charging_enabled</string>
     <string name="config_smartChargingSuspendValue" translatable="false">0</string>
     <string name="config_smartChargingResumeValue" translatable="false">1</string>
@@ -442,9 +471,12 @@
     <!-- Whether to use in-built Screen Record service -->
     <bool name="config_showScreenRecord">false</bool>
 
+<<<<<<< HEAD
     <!-- Should the pinner service pin the Camera application? -->
     <bool name="config_pinnerCameraApp">true</bool>
 
+=======
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
     <!-- Whether the always on display mode is available. -->
     <bool name="config_dozeAlwaysOnDisplayAvailable">false</bool>
 
@@ -457,7 +489,11 @@
 
     <!-- True if the device supports at least one form of multi-window.
          E.g. freeform, split-screen, picture-in-picture. -->
+<<<<<<< HEAD
     <bool name="config_supportsMultiWindow">true</bool>
+=======
+    <bool name="config_supportsMultiWindow">false</bool>
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 
     <!-- Whether to artificially interpret all signal strengths as
          one bar higher than they actually are -->
@@ -475,6 +511,30 @@
     <!-- Feature flag to store TaskSnapshot in 16 bit pixel format to save memory. -->
     <bool name="config_use16BitTaskSnapshotPixelFormat">true</bool>
 
+<<<<<<< HEAD
     <!-- Allow devices to use a lower screenrecording encoder settings because of old hardware -->
     <bool name="config_device_needs_lower_encoder_settings">true</bool>
+=======
+    <!-- The amount to scale fullscreen snapshots for Overview and snapshot starting windows. -->
+    <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.8</item>
+
+    <!-- The amount to scale reduced scale snapshots for Overview and snapshot starting windows.
+         Reduced scale snapshots are loaded before full screen snapshots to improve load times and
+         minimize the chance the user will see an empty task card. If set to 0, reduced scale
+         snapshots are disabled, and snapshots will only be stored at config_highResTaskSnapshotScale
+         -->
+    <item name="config_lowResTaskSnapshotScale" format="float" type="dimen">0.3</item>
+
+    <!-- Launcher Go customization requires AppWidgetService, but otherwise home screen widgets are not supported -->
+    <bool name="config_enableAppWidgetService">true</bool>
+
+    <!-- True if the device supports running activities on secondary displays. -->
+    <bool name="config_supportsMultiDisplay">false</bool>
+
+    <!-- Allow devices to use a lower screenrecording encoder settings because of old hardware -->
+    <bool name="config_device_needs_lower_encoder_settings">true</bool>
+
+    <!-- Remote server that can provide NTP responses. -->
+    <string translatable="false" name="config_ntpServer">1.android.pool.ntp.org</string>
+>>>>>>> 484bc54a1f50cf49c1cc23ef4fe90a9a16ceb722
 </resources>
